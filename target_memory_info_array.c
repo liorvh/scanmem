@@ -79,8 +79,7 @@ void data_to_printable_string(char *buf, int buf_length, matches_and_old_values_
     int i;
     for(i = 0; i < max_length; ++i)
     {
-        uint8_t byte = ((matches_and_old_values_swath *)swath)->data[index+i].old_value;
-        buf[i] = isprint(byte) ? byte : '.';
+        buf[i] = ((matches_and_old_values_swath *)swath)->data[index+i].old_value;
     }
     buf[i] = 0; /* null-terminate */
 }
